@@ -2464,7 +2464,7 @@ pub fn document_area(app: &mut PdfCraftApp, index: usize, ui: &mut egui::Ui) {
         crate::prepare::keys(ui.ctx(), view);
     }
     if editing_content {
-        crate::content_ui::keys(ui.ctx(), view);
+        crate::content_ui::keys(ui.ctx(), view, &added);
     }
     if tool == QuickTool::Link {
         crate::link_ui::keys(ui.ctx(), view);
