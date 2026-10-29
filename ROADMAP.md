@@ -200,6 +200,8 @@ Ranked; detail and the full milestone table in [docs/roadmap.md](docs/roadmap.md
 
 ## Progress log
 
+- **2026-10-29 (M12, #1276 review):** Duplicate RichMedia display keys no longer hide Flash indicators; annotation deletion refreshes attachment positions, including undo/redo; document attachments also preserve raw key identity for extraction. Estimates unchanged.
+
 - **2026-10-29 (M12, #1276 review):** RichMedia extraction preserves the listed raw name-tree key when decoded aliases encounter the text budget. Document-level attachment key identity remains a follow-up. Estimates unchanged.
 
 - **2026-10-29 (M12, #1276 review):** Attachment saving advertises overwrite capability to MCP clients; signed-document notices retain the legacy Flash warning. Estimates unchanged.
