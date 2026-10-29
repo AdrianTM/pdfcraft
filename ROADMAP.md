@@ -200,6 +200,7 @@ Ranked; detail and the full milestone table in [docs/roadmap.md](docs/roadmap.md
 
 ## Progress log
 
+- **2026-10-28 (M13, #2258 follow-up):** Browser downloads use the existing filename-to-media-type mapping, so batch Word exports are DOCX and measurements exports are CSV; extensionless PDF saves retain the PDF type. Estimates unchanged.
 - **2026-10-28 (M13, #2258):** Action Wizard and `action_run` can end an action with Export to Word, producing a DOCX for each selected PDF. Saved actions retain the step; numbered names preserve earlier outputs, and copy restrictions and export safety limits are enforced. Estimates unchanged.
 - **2026-10-27 (M10, OCR models):** Model staging downloads and verifies the ONNX pair after the upstream RTEN URL brownout; runtime discovery prefers complete ONNX pairs per directory, retains complete RTEN fallback and preserves directory precedence.
 - **2026-10-24 (M10, #4158 partial):** Word, HTML, RTF and PowerPoint export keep a block that continues another on its line (an italic case name, a link, a superscript) as a run in its own style inside that paragraph, with the source's word space, instead of a paragraph of its own. Style changes that wrap onto the next line still split paragraphs (the reading blocks keep style boundaries). Estimates unchanged.
