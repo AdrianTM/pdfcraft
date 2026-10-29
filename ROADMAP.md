@@ -200,6 +200,8 @@ Ranked; detail and the full milestone table in [docs/roadmap.md](docs/roadmap.md
 
 ## Progress log
 
+- **2026-10-29 (M3, #4590 review):** Escape cancels grouped tab reordering, preserving tab order, active document and selection; primary-button releases still reorder, and secondary/middle drags show no reorder preview. Estimates unchanged.
+
 - **2026-10-28 (M3, #4590):** Several document tabs can be selected with Ctrl/⌘-click and Shift-click, and dragging one of them moves them all as one run in their strip order, keeping the same document shown. Context-menu actions still act on one tab. Estimates unchanged.
 - **2026-10-27 (M10, OCR models):** Model staging downloads and verifies the ONNX pair after the upstream RTEN URL brownout; runtime discovery prefers complete ONNX pairs per directory, retains complete RTEN fallback and preserves directory precedence.
 - **2026-10-24 (M10, #4158 partial):** Word, HTML, RTF and PowerPoint export keep a block that continues another on its line (an italic case name, a link, a superscript) as a run in its own style inside that paragraph, with the source's word space, instead of a paragraph of its own. Style changes that wrap onto the next line still split paragraphs (the reading blocks keep style boundaries). Estimates unchanged.
