@@ -4,6 +4,7 @@
 
 **Stage: alpha** · next: beta, ~25% (ready for real work 50% → 75%) and ~400–700 h away
 
+> **Last reviewed:** 2026-10-29 | **Last updated:** 2026-10-29 | **Change:** patch (M3 #1399: classify coalesced Hand-wheel notches at each event’s pointer position, including panel and popup crossings; estimates unchanged)
 > **Last reviewed:** 2026-10-29 | **Last updated:** 2026-10-29 | **Change:** patch (M3 #1399: clarify that Hand-wheel zoom covers the document viewport, including page gaps and surrounding space; behavior and estimates unchanged)
 > **Last reviewed:** 2026-10-29 | **Last updated:** 2026-10-29 | **Change:** minor (M7 #2517: a narrowed then widened paragraph keeps the typed spaces the wrap consumed, after save and reopen; estimates unchanged)
 > **Last reviewed:** 2026-10-27 | **Last updated:** 2026-10-27 | **Change:** minor (M10: OCR model downloads use verified ONNX pairs with legacy discovery fallback; estimates unchanged)
@@ -204,6 +205,8 @@ Ranked; detail and the full milestone table in [docs/roadmap.md](docs/roadmap.md
 | 8 | 1.0 polish: performance, right-to-left, missing languages, keyboard-only (M14) | 55–95 |
 
 ## Progress log
+
+- **2026-10-29 (M3, #1399 event ordering):** Hand-wheel input is classified in arrival order, so document and panel/menu notches in the same frame receive zoom/scroll modifiers at their individual event positions. Regression controls cover both orders, a wheel before the first move, pointer departure and an overlapping popup; viewport/layer geometry remains from the last drawn frame. Estimates unchanged.
 
 - **2026-10-29 (M3, #1399 wording):** Hand-wheel zoom uses the document view, including page gaps and surrounding space. The boundary is the viewport, so zooming out keeps working when the page shrinks away from the pointer. Behavior and estimates unchanged.
 
