@@ -4,6 +4,7 @@
 
 **Stage: alpha** · next: beta, ~25% (ready for real work 50% → 75%) and ~400–700 h away
 
+> **Last reviewed:** 2026-10-30 | **Last updated:** 2026-10-30 | **Change:** patch (M3 #1399: mixed Hand-wheel batches keep native input because egui combines frame deltas; homogeneous document batches still zoom; estimates unchanged)
 > **Last reviewed:** 2026-10-29 | **Last updated:** 2026-10-29 | **Change:** patch (M3 #1399: classify coalesced Hand-wheel notches at each event’s pointer position, including panel and popup crossings; estimates unchanged)
 > **Last reviewed:** 2026-10-29 | **Last updated:** 2026-10-29 | **Change:** patch (M3 #1399: clarify that Hand-wheel zoom covers the document viewport, including page gaps and surrounding space; behavior and estimates unchanged)
 > **Last reviewed:** 2026-10-29 | **Last updated:** 2026-10-29 | **Change:** minor (M7 #2517: a narrowed then widened paragraph keeps the typed spaces the wrap consumed, after save and reopen; estimates unchanged)
@@ -205,6 +206,8 @@ Ranked; detail and the full milestone table in [docs/roadmap.md](docs/roadmap.md
 | 8 | 1.0 polish: performance, right-to-left, missing languages, keyboard-only (M14) | 55–95 |
 
 ## Progress log
+
+- **2026-10-30 (M3, #1399 mixed wheel batches):** Keep a coalesced batch unchanged when only some wheel events qualify for Hand zoom, since egui aggregates deltas and uses a single modifier state. Kittest checks both document/panel orders against normal processed scrolling and actual page geometry, plus homogeneous batches and mixed wheel units. Estimates unchanged.
 
 - **2026-10-29 (M3, #1399 event ordering):** Hand-wheel input is classified in arrival order, so document and panel/menu notches in the same frame receive zoom/scroll modifiers at their individual event positions. Regression controls cover both orders, a wheel before the first move, pointer departure and an overlapping popup; viewport/layer geometry remains from the last drawn frame. Estimates unchanged.
 
@@ -711,6 +714,7 @@ Newest first: the date, what moved, and the new overall estimate.
 
 | Date | Change | Summary |
 |---|---|---|
+| 2026-10-30 | patch | M3 #1399: mixed Hand-wheel batches keep native input because egui combines frame deltas; homogeneous document batches still zoom; estimates unchanged. |
 | 2026-10-27 | minor | M10: OCR stages SHA-256-verified ONNX models after the upstream RTEN URL brownout; discovery prefers a complete ONNX pair per directory, falls back to a complete RTEN pair, and never mixes formats or directories; language/web limits and estimates unchanged. |
 | 2026-10-23 | minor | M8, #3205 follow-up: phone-pattern redaction includes the +39 country code on labelled Italian geographic numbers with a slash; dates, protocol identifiers and whole-run guards remain. Estimates unchanged. |
 | 2026-10-23 | minor | M11: image downsampling measures physical resolution after page-local UserUnit scaling, including shared nested forms; synthetic measurement and optimization regressions. Estimates unchanged. |
